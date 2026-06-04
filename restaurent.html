@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Hub Restaurant</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+        }
+
+        .container {
+            background: lightblue;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: black;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            color: red;
+        }
+
+        #home {
+            display: block;
+        }
+
+        .page {
+            display: none;
+
+        }
+
+        .hero {
+            height: 90vh;
+            background: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200") center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin: 15px 0;
+        }
+
+        .hero button {
+            padding: 12px 25px;
+            border: none;
+            background: orange;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        section {
+            padding: 50px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .about p {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            width: 250px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px gray;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card h3,
+        .card p {
+            padding: 10px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        form button {
+            width: 100%;
+            padding: 12px;
+            background: green;
+            color: white;
+            border: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        button {
+            background-color: lightgreen;
+            width: 90px;
+            height: 30px;
+            border-radius: 50px;
+            margin-left: 100px;
+            align-content: center;
+
+        }
+
+        .b {
+            background-color: lightgreen;
+            width: 200px;
+            height: 40px;
+            border-radius: 50px;
+            margin-left: 150px;
+
+        }
+
+        button:hover {
+            background-color: red;
+        }
+
+        .book {
+            background-color: red;
+            border: none;
+            width: 150px;
+            height: 30px;
+            border-radius: 10px;
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="logo">🍽 Food Hub</div>
+
+        <div class="menu">
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="#" onclick="showPage('about')">About</a>
+            <a href="#" onclick="showPage('menuPage')">Menu</a>
+            <a href="#" onclick="showPage('galleryPage')">Gallery</a>
+            <a href="#" onclick="showPage('bookingPage')">Booking</a>
+            <a href="#" onclick="showPage('contactPage')">Contact</a>
+        </div>
+    </div>
+
+
+    <div id="home">
+        <section class="hero">
+            <h1>Welcome To Food Hub</h1>
+            <p>Delicious Food & Great Experience</p>
+            <a class="book" href="table.html" style="color:white; text-decoration: none;">Book A Table</a>
+        </section>
+    </div>
+
+    <div id="about" class="page">
+        <section class="about">
+            <h2>About Us</h2>
+            <p>
+                Food Hub is a modern restaurant offering delicious food,
+                comfortable dining and excellent service. We provide a
+                memorable dining experience for families and friends.
+            </p>
+        </section>
+    </div>
+
+    <div id="menuPage" class="page">
+        <section>
+            <h2>Menu Card</h2>
+
+            <div class="menu-items">
+
+
+
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd">
+                    <h3>Burger</h3>
+                    <p>₹149<button>Buy</button></p>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9">
+                    <h3>Pasta</h3>
+                    <p>₹199<button>Buy</button></p>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0">
+                    <h3>Biryani</h3>
+                    <p>₹249<button>Buy</button></p>
+                </div>
+                <div class="card">
+                    <img
+                        src="https://content.jdmagicbox.com/v2/comp/delhi/b4/011pxx11.xx11.180709182255.h1b4/catalogue/thalis-of-india-helpage-india-delhi-home-delivery-restaurants-eg4heloiei.jpg">
+                    <h3>Special Thali</h3>
+                    <p>₹400<button>Buy</button></p>
+                </div>
+                <div class="card">
+                    <img src="https://cdn.uengage.io/uploads/50316/image-9327-1749384722.jpg">
+                    <h3>Gulab Jamun</h3>
+                    <p>₹299<button>Buy</button></p>
+                </div>
+                <div class="card">
+                    <img
+                        src="https://i.ytimg.com/vi/sNRMnexxAq4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAlYAIGZ9zboQTul_j0Gl_yzcSYiQ">
+                    <h3>Manchurian</h3>
+                    <p>₹200<button>Buy</button></p>
+                </div>
+                <div class="card">
+                    <img
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/f2/24/e4/20180514-161406-largejpg.jpg?w=900&h=500&s=1">
+                    <h3>Coffee</h3>
+                    <p>₹300<button>Buy</button></p>
+                </div>
+                <div class="card">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVC1WbgefaV8LXrW8wwmAVOdh-it2XJkRHxQ&s">
+                    <h3>Samosha</h3>
+                    <p>₹199<button>Buy</button></p>
+                </div>
+                <div class="card">
+                    <img
+                        src="https://static.wixstatic.com/media/8f1abd_80bf432a005041b59c2a7fa1960ce71e~mv2.jpeg/v1/fill/w_8499,h_3727,al_c,q_90/8f1abd_80bf432a005041b59c2a7fa1960ce71e~mv2.jpeg">
+                    <h3>Cold drink</h3>
+                    <p>₹250<button>Buy</button></p>
+
+                </div>
+                <div class="card">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyJOJyLEmpO1VYuo_gfgnwprFbntjwA9kD1w&s">
+                    <h3>Chhole Bhature</h3>
+                    <p>₹240<button>Buy</button></p>
+
+                </div>
+                <div class="card">
+                    <img
+                        src="https://b.zmtcdn.com/data/pictures/5/19154755/74254183fc01916d883e0865815549b2_o2_featured_v2.jpg">
+                    <h3>Jalebi</h3>
+                    <p>₹150<button>Buy</button></p>
+
+                </div>
+                <div class="card">
+                    <img
+                        src="https://i.ytimg.com/vi/zMbmJkJXHT4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBxx38hpmXFd-XYTI1OD5v1OyW_1g">
+                    <h3>Gajar ka Halwa</h3>
+                    <p>₹100<button>Buy</button></p>
+
+                </div>
+                <div class="card">
+                    <img
+                        src="https://i.ytimg.com/vi/gQtZXZvS-lc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD5ypItdH4Jy92ggHZQP6iQMaGv8A">
+                    <h3>Dal Rice</h3>
+                    <p>₹350<button>Buy</button></p>
+
+                </div>
+                <div class="card">
+                    <img src="https://cdn.tasteatlas.com/Images/Dishes/728691b02df3490bbbecdea8422530d1.jpg?m=facebook">
+                    <h3>Rasgulla</h3>
+                    <p>₹200<button>Buy</button></p>
+
+                </div>
+                <div class="card">
+                    <img
+                        src="https://i.ytimg.com/vi/AeE-QY_9_F0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDQgjcANPPEJixCkJInom60YenOSA">
+                    <h3>Chaumein</h3>
+                    <p>₹90<button>Buy</button></p>
+
+                </div>
+                <div class="card">
+                    <img
+                        src="https://b.zmtcdn.com/data/pictures/2/21391092/39c2cd83e9ddb48fa118a299c2322a07_o2_featured_v2.jpg">
+                    <h3>Pizza</h3>
+                    <p>₹300<button>Buy</button></p>
+
+                </div>
+
+
+            </div>
+
+    </div>
+    </section>
+    </div>
+
+    <div id="galleryPage" class="page">
+        <section>
+            <h2>Gallery</h2>
+
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4">
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4">
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0">
+            </div>
+        </section>
+    </div>
+
+    <div id="bookingPage" class="page">
+        <section>
+            <h2>Table Booking</h2>
+
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="tel" placeholder="Phone Number">
+                <textarea rows="4" placeholder="Message"></textarea>
+                <button class="b" type="submit">Book Now</button>
+            </form>
+        </section>
+    </div>
+
+
+
+    <div id="contactPage" class="page">
+        <section>
+            <h2>Contact Us</h2>
+
+            <p style="text-align:center;">
+
+                ⛔ Rohit Kumar ⛔<br><br>
+                📍 Banaras, Uttar Pradesh<br><br>
+                📞 +91 8879263893<br><br>
+                ✉ rohitbind2213088@gmail.com
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 Food Hub Restaurant. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+
+            document.getElementById("home").style.display = "none";
+
+            let pages = document.querySelectorAll(".page");
+
+            pages.forEach(page => {
+                page.style.display = "none";
+            });
+
+            document.getElementById(pageId).style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
