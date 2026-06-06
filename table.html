@@ -25,6 +25,47 @@
             justify-content: space-between;
             align-items: center;
         }
+        @media screen and (max-width:768px){
+
+    .menu-bar{
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .logo{
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
+
+    .menu-links{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .menu-links a{
+        margin: 3px;
+        padding: 5px;
+        font-size: 14px;
+    }
+    .menu-links{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+    width: 100%;
+}
+
+    .box{
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .container{
+        margin-top: 10px;
+    }
+}
 
         .logo {
             font-size: 24px;

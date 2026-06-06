@@ -264,6 +264,44 @@
     <footer>
         <p>© 2026 Food Hub Restaurant. All Rights Reserved.</p>
     </footer>
+    <button onclick="topFunction()" id="topBtn">⬆</button>
+
+<style>
+#topBtn{
+    display:none;
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    z-index:99;
+    border:none;
+    background:orange;
+    color:white;
+    cursor:pointer;
+    padding:15px;
+    border-radius:50%;
+    font-size:20px;
+}
+</style>
+
+<script>
+let mybutton = document.getElementById("topBtn");
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 200 ||
+        document.documentElement.scrollTop > 200) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+};
+
+function topFunction() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+</script>
 
 </body>
 
