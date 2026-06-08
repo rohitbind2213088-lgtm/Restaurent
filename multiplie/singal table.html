@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Hub Restaurant</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f8f8f8;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: #f4b400;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #f4b400;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: 1s;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 70px;
+        }
+
+        .hero-content p {
+            font-size: 25px;
+            margin: 20px 0;
+        }
+
+        .btn {
+            background: #f4b400;
+            color: white;
+            text-decoration: none;
+            padding: 15px 35px;
+            border-radius: 30px;
+        }
+
+        .btn:hover {
+            background: #d18d00;
+        }
+
+        section {
+            padding: 80px 50px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        .about {
+            text-align: center;
+            max-width: 900px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .card {
+            width: 280px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .card p {
+            text-align: center;
+            padding-bottom: 15px;
+            color: #f4b400;
+            font-weight: bold;
+        }
+
+        .contact {
+            text-align: center;
+            line-height: 2;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media(max-width:768px) {
+
+            header {
+                flex-direction: column;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .hero-content p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🍽 Food Hub</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#services">Services</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <section class="hero" id="home">
+
+        <img class="slide active"
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80">
+
+        <img class="slide"
+            src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1920&q=80">
+
+        <img class="slide"
+            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <h1>Luxury Dining Experience</h1>
+            <p>Fresh Ingredients • Delicious Taste • Premium Service</p>
+            <a href="#contact" class="btn">Reserve A Table</a>
+        </div>
+
+    </section>
+
+    <section id="about">
+        <h2 class="title">About Us</h2>
+
+        <p class="about">
+            Food Hub is a premium restaurant dedicated to serving fresh,
+            delicious food with exceptional hospitality and unforgettable
+            dining experiences.
+        </p>
+    </section>
+
+    <section id="menu">
+        <h2 class="title">Popular Dishes</h2>
+
+        <div class="container">
+
+           
+            <div class="container">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd">
+        <h3>Cheese Burger</h3>
+        <p>₹149</p>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c">
+        <h3>Italian Pizza</h3>
+        <p>₹299</p>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9">
+        <h3>White Sauce Pasta</h3>
+        <p>₹199</p>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0">
+        <h3>Chicken Biryani</h3>
+        <p>₹249</p>
+    </div>
+    <div class="card">
+    <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7">
+    <h3>Butter Chicken</h3>
+    <p>₹320</p>
+</div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f">
+        <h3>Paneer Tikka</h3>
+        <p>₹220</p>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591">
+        <h3>Margherita Pizza</h3>
+        <p>₹280</p>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add">
+        <h3>French Fries</h3>
+        <p>₹120</p>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b">
+        <h3>Cold Coffee</h3>
+        <p>₹180</p>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb">
+        <h3>Ice Cream</h3>
+        <p>₹99</p>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc">
+        <h3>Chocolate Cake</h3>
+        <p>₹150</p>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+        <h3>Special Combo Meal</h3>
+        <p>₹399</p>
+    </div>
+
+</div>
+    </section>
+
+    <section id="services">
+        <h2 class="title">Our Services</h2>
+
+        <div class="container">
+
+            <div class="card">
+                <h3>🍽 Fine Dining</h3>
+                <p>Luxury Restaurant Experience</p>
+            </div>
+
+            <div class="card">
+                <h3>🚚 Fast Delivery</h3>
+                <p>Quick Doorstep Delivery</p>
+            </div>
+
+            <div class="card">
+                <h3>🎉 Event Catering</h3>
+                <p>Perfect For Parties & Events</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="reviews">
+        <h2 class="title">Customer Reviews</h2>
+
+        <div class="container">
+
+            <div class="card">
+                <h3>⭐⭐⭐⭐⭐</h3>
+                <p>Amazing Food & Excellent Service</p>
+            </div>
+
+            <div class="card">
+                <h3>⭐⭐⭐⭐⭐</h3>
+                <p>Best Restaurant Experience</p>
+            </div>
+
+            <div class="card">
+                <h3>⭐⭐⭐⭐⭐</h3>
+                <p>Beautiful Ambience & Taste</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2 class="title">Contact Us</h2>
+
+        <div class="contact">
+            📍 Banaras, India <br><br>
+            📞 +91 8879263893 <br><br>
+            ✉ rohitbind2213088@gmail.com <br><br>
+            🕒 Open Daily: 10:00 AM – 11:00 PM
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Food Hub Restaurant | All Rights Reserved
+    </footer>
+
+    <script>
+        let slides = document.querySelectorAll(".slide");
+        let current = 0;
+
+        setInterval(() => {
+            slides[current].classList.remove("active");
+            current = (current + 1) % slides.length;
+            slides[current].classList.add("active");
+        }, 4000);
+    </script>
+
+</body>
+
+</html>

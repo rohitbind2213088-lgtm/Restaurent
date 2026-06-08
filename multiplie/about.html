@@ -206,12 +206,13 @@
         <div class="logo">🍽 Food Hub</div>
 
         <div class="menu">
-            <a href="#" onclick="showPage('home')">Home</a>
-            <a href="#" onclick="showPage('about')">About</a>
-            <a href="#" onclick="showPage('menuPage')">Menu</a>
-            <a href="#" onclick="showPage('galleryPage')">Gallery</a>
-            <a href="#" onclick="showPage('bookingPage')">Booking</a>
-            <a href="#" onclick="showPage('contactPage')">Contact</a>
+            <a href="index.html" onclick="showPage('home')">Home</a>
+            <a href="about.html" onclick="showPage('about')">About</a>
+            <a href="menu.html" onclick="showPage('menuPage')">Menu</a>
+            <a href="gallery.html" onclick="showPage('galleryPage')">Gallery</a>
+            <a href="booking.html" onclick="showPage('bookingPage')">Booking</a>
+            <a href="contact.html" onclick="showPage('contactPage')">Contact</a>
+            
         </div>
     </div>
 
@@ -403,20 +404,6 @@
         <p>© 2026 Food Hub Restaurant. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        function showPage(pageId) {
-
-            document.getElementById("home").style.display = "none";
-
-            let pages = document.querySelectorAll(".page");
-
-            pages.forEach(page => {
-                page.style.display = "none";
-            });
-
-            document.getElementById(pageId).style.display = "block";
-        }
-    </script>
 
 </body>
 
